@@ -61,3 +61,28 @@ console.log(makeNegative(-5)); // return -5
 console.log(makeNegative(1)); // return -1
 console.log(makeNegative(0)); // return 0
 console.log(makeNegative(0.12)); // return -0.12
+
+// *** Vowel Count
+// Return the number of vowels in a given string
+function getCount(str) {
+  var vowelsCount = 0;
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  // use a nested for...loop
+  // for (let i = 0; i < str.length; i += 1) {
+  //   for (let j = 0; j < vowels.length; j += 1) {
+  //     if (str[i] === vowels[j]) {
+  //       vowelsCount += 1;
+  //     }
+  //   }
+  // }
+  // use a nested for...of loop
+  for (let letter of str) {
+    for (let vowel of vowels) {
+      if (letter === vowel) {
+        vowelsCount += 1;
+      }
+    }
+  }
+
+  return vowelsCount;
+}

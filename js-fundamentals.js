@@ -163,3 +163,22 @@ function disemvowel(str) {
 }
 
 disemvowel('This website is for losers LOL!');
+
+// *** Convert boolean values to strings 'yes' or 'no'
+function bollToWord(bool) {
+  // if (bool) {
+  //   return 'Yes'; 
+  // }
+  // return 'No';
+
+  return bool ? 'Yes' : 'No';
+}
+
+// *** Opposite number
+function opposite(number) {
+  // if (number < 0) {
+  //   return Math.abs(number);
+  // }
+  // return number * -1;
+  return -number;
+}

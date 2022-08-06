@@ -139,3 +139,27 @@ function descendingOrder(n) {
 }
 
 // [1, 2, 3, 4, 5]
+
+// *** Reversed Strings 
+// reverse characters of string passed into function
+function solution(str) {
+  return str.split('').reverse().join('');
+}
+
+solution('world'); // => 'dlrow'
+
+// *** Disemvowel Trolls
+// function takes a string and returns new string with vowels removed
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+
+  // using split, filter, and join
+  // const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  // return str.split('').filter(function(el) {
+  //   return vowels.indexOf(el) == -1;
+  // }).join('');
+
+}
+
+disemvowel('This website is for losers LOL!');

@@ -121,3 +121,21 @@ highAndLow("1 2 -3 4 5"); // return "5 -3"
 highAndLow("1 9 3 4 -5"); // return "9 -5"
 highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"); // return "542 -214"
 highAndLow("1 9 3 4 -5 dfdsdfefef"); // return NaN NaN
+
+// *** Descending Order 
+// accept non-negative integer and return it with digits in descending order
+function descendingOrder1(num) {
+  const numArray = Array.from(String(num), Number);
+  const sortedArray = numArray.sort(function(a, b) {
+    return b - a;
+  })
+  .join('')
+  return parseInt(sortedArray);
+}
+
+// *Better solution
+function descendingOrder(n) {
+  return parseInt(String(n).split('').sort().reverse().join(''));
+}
+
+// [1, 2, 3, 4, 5]

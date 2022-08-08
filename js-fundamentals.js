@@ -86,3 +86,38 @@ function getCount(str) {
 
   return vowelsCount;
 }
+
+// console.log(getCount('miranda'));
+// console.log(getCount('commander shepard'));
+// console.log(getCount('aeiouuai'))
+
+// *** Highest and Lowest 
+// argument is string of space seperated numbers - return highest and lowest numbers in string format, highest number first
+// *My Attempt:
+function highAndLowOld(numbers) {
+  // convert string to array of strings
+  // convert array of strings into array of nums
+  const numsArray = numbers.split(' ').map(Number); // didn't need the map function here (see below)
+  // find highest num in array
+  const high = Math.max(...numsArray);
+  // find lowest num in array
+  const low = Math.min(...numsArray);
+
+  return `${high} ${low}`;
+  // return highest and lowest in string format
+
+}
+// * Better Solution:
+function highAndLow(numbers){
+  numbers = numbers.split(' ');
+  // console.log(numbers);
+  // console.log(Math.max(...numbers));
+  // console.log(Math.min(...numbers));
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`; // Math.max, min convert the strings to numbers for you (in this case)
+}
+
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"); // return "542 -214"
+highAndLow("1 9 3 4 -5 dfdsdfefef"); // return NaN NaN

@@ -20,3 +20,22 @@ function addBinary(a,b) {
   // more concise:
   // return (a + b).toString(2);
 }
+
+// *** Reduce but Grow - 8 kyu
+/*
+  Given a non-empty array of integers, return the result of multiplying the values together in order. 
+  Example:
+  [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+*/
+
+function grow(arr) {
+  // using reduce
+  return arr.reduce((prevVal, currVal) => prevVal * currVal, 1);
+
+  // using a for loop
+  // let product = 1;
+  // for (let num of arr) {
+  //   product *= num;
+  // }
+  // return product;
+}
